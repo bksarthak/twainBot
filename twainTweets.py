@@ -21,10 +21,10 @@ def tweet():
 	  if len(line) < 140: #verify quote is lesser than 140 char limit
 	   if len(line) < 130: #check if the quote has space for hashtag
 	    line = line + '#marktwain'
-	    api.update_status(line)
+	    api.update_status(status=line)
 	    time.sleep(86400) #tweet every 24 hours
 	   else:
-	    api.update_status(line)
+	    api.update_status(status=line)
 	    time.sleep(86400)
 	  else:
 	   line.strip()
