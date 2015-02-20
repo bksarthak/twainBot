@@ -1,9 +1,10 @@
 #__author__ = BK Sarthak Das
 
-import tweepy, time, sys
+import tweepy, time, sys,datetime
 def tweet(): 
  try:
 #Enter your keys and tokens
+  i = datetime.now()
   twainfile = str(sys.argv[1])
   CONSUMER_KEY = '************************'
   CONSUMER_SECRET = '***********************'
@@ -23,13 +24,18 @@ def tweet():
 	    line = line + '#marktwain'
 	    api.update_status(status=line)
 	    time.sleep(86400) #tweet every 24 hours
+	    now=i.strftime('%Y/%m/%d %H:%M:%S')
+	    print ('Tweet posted at',now)
 	   else:
 	    api.update_status(status=line)
 	    time.sleep(86400)
+	    now=i.strftime('%Y/%m/%d %H:%M:%S')
+	    print ('Tweet posted at',now)
 	  else:
 	   line.strip()
  except tweepy.TweepError as e:
-  print("Tweet not posted ",e) 
+  now=i.strftime('%Y/%m/%d %H:%M:%S')
+  print("Tweet not posted ",e,now) 
  
 def main():
  tweet()
