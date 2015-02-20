@@ -5,10 +5,10 @@ def tweet():
  try:
 #Enter your keys and tokens
   twainfile = str(sys.argv[1])
-  CONSUMER_KEY = '50fnMtCR3HN1kVPTg1yI9YgIz'
-  CONSUMER_SECRET = '4oBo1TzfNkSBSolSODRVQr3aAWoacgCxCYvEdunYP6JUtJEBA3'
-  ACCESS_TOKEN = '3032350844-fN2gKOp69TC6qzzx3rGpeiR11N07cGSlvOg41be'
-  ACCESS_SECRET = 'vS9IqJaIWME799cXbQdrD2Glrzoe7PKh8CCnaStD7qSdA'
+  CONSUMER_KEY = '************************'
+  CONSUMER_SECRET = '***********************'
+  ACCESS_TOKEN = '**********************************'
+  ACCESS_SECRET = '*******************************'
   auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
   auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
   api = tweepy.API(auth)
